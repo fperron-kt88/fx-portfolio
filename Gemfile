@@ -1,5 +1,10 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.3.4"
-gem "jekyll-remote-theme" # Allows GitHub Pages to use remote themes
+gem "jekyll", "~> 4.3"
+gem "jekyll-remote-theme"
+
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
+end
 
