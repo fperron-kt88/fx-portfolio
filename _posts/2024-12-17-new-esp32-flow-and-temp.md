@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Porting to esp32: happier flow and temp sensors"
+title: "esp32 porting: happier flow and temp sensors"
 date: 2024-06-17
 categories: projects
 image: /assets/images/project1.jpg
@@ -37,36 +37,9 @@ backend interface.
 So, in essence, this projet is a shim layer between a backend in python
 and firmware in an FPGA.
 
-```wavedrom
-{ "signal": [
-  { "name": "clk",  "wave": "p.....|..." },
-  { "name": "data", "wave": "x.345x|=.x", "data": ["head", "body", "tail", "data"] },
-  { "name": "req",  "wave": "0.1..0|1.0" },
-  { "name": "ack",  "wave": "1.....|01." }
-]}
-```
-
-
-```mermaid
-graph TD
-    A[Start] --> B{Is it working?}
-    B -->|Yes| C[Great!]
-    B -->|No| D[Fix it!]
-    D --> B
-```
-
-$E=mc^2$
-
-$$
-\int_{a}^{b} x^2 dx = \frac{b^3 - a^3}{3}
-$$
-
-
 ### Features:
 - Implement the full resolution from an arbitrary number of digital temperature probes
 - Measure 2 liquid flows with constant minimal resolution
 - Maintain a very clear identification of: any connected device, its build id and api version
 
-
-[Visit Project](https://example.com)
 
