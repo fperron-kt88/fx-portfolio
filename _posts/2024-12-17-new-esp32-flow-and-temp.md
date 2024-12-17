@@ -37,6 +37,15 @@ backend interface.
 So, in essence, this projet is a shim layer between a backend in python
 and firmware in an FPGA.
 
+```wavedrom
+{ "signal": [
+  { "name": "clk",  "wave": "p.....|..." },
+  { "name": "data", "wave": "x.345x|=.x", "data": ["head", "body", "tail", "data"] },
+  { "name": "req",  "wave": "0.1..0|1.0" },
+  { "name": "ack",  "wave": "1.....|01." }
+]}
+```
+
 
 ```mermaid
 graph TD
