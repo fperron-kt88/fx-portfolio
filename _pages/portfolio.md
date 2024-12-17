@@ -10,6 +10,6 @@ author_profile: true
 {% for post in site.posts %}
   <h3>{{ post.title }}</h3>
   <p>{{ post.excerpt }}</p>
-  <a href="{{ post.url }}">Read more</a>
+  <a href="{{ post.url | relative_url }}">Read more</a>
   <hr>
 {% endfor %}
