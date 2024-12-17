@@ -4,29 +4,35 @@ description: "Musings involving electronics, systems, and stuff I care about."
 baseurl: "" # Leave this empty for the root
 url: "https://fperron-kt88.github.io"
 
-# Remote theme
-remote_theme: pages-themes/midnight@v0.2.0
+#author:
+#  name: "François Perron"
+#  avatar: "/assets/images/avatar.jpg"
+#  bio: "Hacker at heart, avid learner. I build systems."
+
+# Custom variables for GitHub
+github:
+  repository_url: "https://github.com/fperron-kt88/fx-portfolio"
+  zip_url: "https://github.com/fperron-kt88/fx-portfolio/archive/refs/heads/main.zip"
+  tar_url: "https://github.com/fperron-kt88/fx-portfolio/archive/refs/heads/main.tar.gz"
+  owner_url: "https://github.com/fperron-kt88"
+  owner_name: "François Perron"
+  project_tagline: "Hosted on GitHub Pages"
+  build_revision: "v1.0" # Example revision
+
+# Show downloads toggle
+#show_downloads: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Plugins
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
-# Navigation Links
-nav_links:
-  - title: "Home"
-    url: "/"
-  - title: "Portfolio"
-    url: "/portfolio/"
-  - title: "About"
-    url: "/about/"
-  - title: "Contact"
-    url: "/contact/"
 
-# Author and Avatar
-author:
-  name: "François Perron"
-  avatar: "/assets/images/avatar.jpg"
-  bio: "Hacker at heart, avid learner. I build systems."
+# Site language
+lang: "en-US"
 
