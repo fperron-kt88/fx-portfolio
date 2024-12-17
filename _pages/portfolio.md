@@ -8,7 +8,7 @@ author_profile: true
 ## Projects
 
 {% for post in site.posts %}
-  <h2>{{ post.title }}</h2>
+  <h3>{{ post.title }}</h3>
   <p>{{ post.excerpt }}</p>
   <a href="{{ post.url }}">Read more</a>
   <hr>

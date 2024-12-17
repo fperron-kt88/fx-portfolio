@@ -1,58 +1,157 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="{{ site.lang | default: 'en-US' }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-{% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    {% include head-custom.html %}
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <ul>
-            {% if site.show_downloads %}
-              <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
-              <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
-              <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
-              <li class="title">DOWNLOADS</li>
-            {% endif %}
+        {% seo %}
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+        />
+        <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"
+        ></script>
+        <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+        <script
+            type="text/javascript"
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        ></script>
+        <script type="text/javascript">
+            window.MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"],
+                        ["\\(", "\\)"],
+                    ], // Enable $...$ for inline math
+                    displayMath: [
+                        ["$$", "$$"],
+                        ["\\[", "\\]"],
+                    ],
+                },
+                startup: {
+                    pageReady() {
+                        return MathJax.startup.defaultPageReady();
+                    },
+                },
+            };
+        </script>
 
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if lt IE 8]>
+            <link
+                rel="stylesheet"
+                href="{{ '/assets/css/ie.css' | relative_url }}"
+            />
+        <![endif]-->
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        {% include head-custom.html %}
+    </head>
+    <body>
+        <div id="header">
+            <nav>
+                <ul>
+                    {% if site.show_downloads %}
+                    <li class="fork">
+                        <a href="{{ site.github.repository_url }}"
+                            >View On GitHub</a
+                        >
+                    </li>
+                    <li class="downloads">
+                        <a href="{{ site.github.zip_url }}">ZIP</a>
+                    </li>
+                    <li class="downloads">
+                        <a href="{{ site.github.tar_url }}">TAR</a>
+                    </li>
+                    <li class="title">DOWNLOADS</li>
+                    {% endif %}
 
-    <!-- {% for link in site.nav_links %}
+                    <!-- {% for link in site.nav_links %}
       <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
     {% endfor %}
     -->
-
-          </ul>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+                </ul>
+            </nav>
         </div>
+        <!-- end header -->
 
-        {{ content }}
+        <div class="wrapper">
+            <section>
+                <div id="title">
+                    <h1>
+                        {{ site.title | default: site.github.repository_name }}
+                    </h1>
+                    <p>
+                        {{ site.description | default:
+                        site.github.project_tagline }}
+                    </p>
+                    <hr />
+                    <span class="credits left"
+                        >Project maintained by
+                        <a href="{{ site.github.owner_url }}"
+                            >{{ site.github.owner_name }}</a
+                        ></span
+                    >
+                    <span class="credits right"
+                        >Hosted on GitHub Pages &mdash; Theme by
+                        <a href="https://twitter.com/mattgraham"
+                            >mattgraham</a
+                        ></span
+                    >
+                </div>
 
-      </section>
+                {{ content }}
+            </section>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li>
+                        <a href="{{ '/portfolio/' | relative_url }}"
+                            >Portfolio</a
+                        >
+                    </li>
+                    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+                </ul>
+            </nav>
+            <p style="text-align: left">
+                &copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights
+                reserved.
+            </p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Find all Mermaid code blocks
+                const mermaidBlocks = document.querySelectorAll(
+                    "pre > code.language-mermaid"
+                );
 
-    </div>
-  </body>
+                mermaidBlocks.forEach((block) => {
+                    // Replace the pre/code block with a div for Mermaid rendering
+                    const parent = block.parentElement;
+                    const mermaidCode = block.textContent;
+
+                    const mermaidDiv = document.createElement("div");
+                    mermaidDiv.classList.add("mermaid");
+                    mermaidDiv.innerHTML = mermaidCode;
+
+                    parent.replaceWith(mermaidDiv);
+                });
+
+                // Initialize Mermaid
+                mermaid.initialize({ startOnLoad: true });
+            });
+        </script>
+    </body>
 </html>

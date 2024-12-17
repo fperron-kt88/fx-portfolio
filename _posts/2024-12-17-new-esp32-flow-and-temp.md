@@ -37,14 +37,14 @@ backend interface.
 So, in essence, this projet is a shim layer between a backend in python
 and firmware in an FPGA.
 
+
 ```mermaid
 graph TD
     A[Start] --> B{Is it working?}
     B -->|Yes| C[Great!]
-    B -->|No| D[Fix it]
+    B -->|No| D[Fix it!]
     D --> B
 ```
-
 
 $E=mc^2$
 
@@ -58,7 +58,6 @@ $$
 - Measure 2 liquid flows with constant minimal resolution
 - Maintain a very clear identification of: any connected device, its build id and api version
 
-![Project Image](/assets/images/project1.jpg)
 
 [Visit Project](https://example.com)
 
