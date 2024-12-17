@@ -1,4 +1,4 @@
-theme: "mmistakes/minimal-mistakes"
+theme: "jekyll-theme-midnight"
 minimal_mistakes_skin: "dark" # Choose from default, dark, mint, etc.
 
 title: "FX's Projects"
