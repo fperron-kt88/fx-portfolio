@@ -1,4 +1,4 @@
-remote_theme: "mmistakes/minimal-mistakes"
+theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark" # Choose from default, dark, mint, etc.
 
 title: "FX's Projects"
@@ -26,7 +26,6 @@ author:
 
 # Plugins
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
 
