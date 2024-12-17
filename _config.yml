@@ -1,0 +1,32 @@
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark" # Choose from default, dark, mint, etc.
+
+title: "FX's Projects"
+name: "François Perron"
+description: "Musings involving electronics, systems, and stuff I care about."
+baseurl: "" # Leave this empty for the root
+url: "https://yourusername.github.io" # Replace with your GitHub Pages URL
+
+# Navigation Links
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "Portfolio"
+    url: "/portfolio/"
+  - title: "About"
+    url: "/about/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Author and Avatar
+author:
+  name: "François Perron"
+  avatar: "/assets/images/avatar.jpg" # Upload your avatar
+  bio: "Hacker at heart, avid learner. I build systems."
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+
