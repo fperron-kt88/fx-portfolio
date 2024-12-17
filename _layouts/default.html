@@ -153,5 +153,43 @@
                 mermaid.initialize({ startOnLoad: true });
             });
         </script>
+        <!-- WaveDrom Library -->
+        <script
+            src="https://wavedrom.com/skins/default.js"
+            type="text/javascript"
+        ></script>
+        <script
+            src="https://wavedrom.com/skins/narrow.js"
+            type="text/javascript"
+        ></script>
+        <!-- Optional alternative skins -->
+        <script
+            src="https://wavedrom.com/skins/dark.js"
+            type="text/javascript"
+        ></script>
+        <!-- Dark theme -->
+        <script
+            src="https://wavedrom.com/wavedrom.min.js"
+            type="text/javascript"
+        ></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Find all code blocks with class 'language-wavedrom'
+                document
+                    .querySelectorAll("pre code.language-wavedrom")
+                    .forEach(function (block) {
+                        // Convert the block's content to a WaveDrom diagram
+                        const script = document.createElement("script");
+                        script.type = "WaveDrom";
+                        script.textContent = block.textContent;
+                        block.parentElement.replaceWith(script);
+                    });
+
+                // Set the skin to dark before rendering
+                WaveDrom.skin = "dark";
+                WaveDrom.ProcessAll();
+            });
+        </script>
     </body>
 </html>
