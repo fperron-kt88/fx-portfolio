@@ -36,3 +36,18 @@ plugins:
 # Site language
 lang: "en-US"
 
+# Navigation Links
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "Portfolio"
+    url: "/portfolio/"
+  - title: "About"
+    url: "/about/"
+
+# Recognize _pages directory
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+

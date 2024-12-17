@@ -1,9 +1,15 @@
 ---
 title: "Portfolio"
-layout: posts
+layout: default
 permalink: /portfolio/
 author_profile: true
 ---
 
-Here are some of the projects I'm most proud of.
+## Projects
 
+{% for post in site.posts %}
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.excerpt }}</p>
+  <a href="{{ post.url }}">Read more</a>
+  <hr>
+{% endfor %}
