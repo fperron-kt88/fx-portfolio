@@ -1,10 +1,17 @@
-theme: "jekyll-theme-midnight"
-
 title: "FX's Projects"
 name: "François Perron"
 description: "Musings involving electronics, systems, and stuff I care about."
 baseurl: "" # Leave this empty for the root
-url: "https://fperron-kt88.github.io" # Replace with your GitHub Pages URL
+url: "https://fperron-kt88.github.io"
+
+# Remote theme
+remote_theme: pages-themes/midnight@v0.2.0
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
 
 # Navigation Links
 nav_links:
@@ -20,11 +27,6 @@ nav_links:
 # Author and Avatar
 author:
   name: "François Perron"
-  avatar: "/assets/images/avatar.jpg" # Upload your avatar
+  avatar: "/assets/images/avatar.jpg"
   bio: "Hacker at heart, avid learner. I build systems."
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
 
