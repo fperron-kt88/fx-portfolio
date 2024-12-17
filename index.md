@@ -1,8 +1,9 @@
 ---
-layout: home
-author_profile: true
-title: "Welcome to My Portfolio"
+layout: default
+title: Home
 ---
 
-Check out my latest projects below.
+# Welcome to FX's Projects!
+
+This is a placeholder page. Add your content here.
 
