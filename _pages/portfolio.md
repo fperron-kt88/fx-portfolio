@@ -7,7 +7,12 @@ author_profile: true
 
 **December 2024 - update**
 
-This portfolio is brand new! Content is appearing here as I dig into the documents of the past and treat them to look modern in 2024. Bookmark this and comeback soon!
+This portfolio is brand new! Content is appearing here as I dig into the
+documents and give them the 2025 look.
+
+Don't forget to <a href="javascript:;"
+onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
+the chat</a> and comeback soon!
 
 ## Projects
 
