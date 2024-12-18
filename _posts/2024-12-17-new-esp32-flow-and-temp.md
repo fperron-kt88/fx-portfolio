@@ -1,12 +1,11 @@
 ---
 layout: default
-title: "esp32 porting: happier flow and temp sensors"
+title: "esp32 port: better flow and temp sensors"
 date: 2024-06-17
 categories: projects
 image: /assets/images/project1.jpg
 ---
 
-# {{page.title}}
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="flex: 1; text-align: center; max-width: 40%;">
@@ -22,6 +21,8 @@ image: /assets/images/project1.jpg
 asking Dall-E to help me with the visuals." %}
 
 {% include spacer.html size="3rem" %}
+
+# {{page.title}}
 
 Here is a recent one.
 
