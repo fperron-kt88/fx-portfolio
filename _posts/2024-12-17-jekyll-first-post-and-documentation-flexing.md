@@ -6,8 +6,6 @@ categories: projects
 image: /assets/images/new-blog.png
 ---
 
-# {{page.title}}
-
 <!-- Banner Image -->
 <div style="
   background-image: url('{{ '/assets/images/optimization.webp' | relative_url }}');
@@ -19,66 +17,81 @@ image: /assets/images/new-blog.png
 
 {% include spacer.html size="3em" %}
 
-Here is a cool new project. The main idea is to carve-out a little
-space on the internet to display projects and stuff.
+# {{page.title}}
 
-So, let's put together a site to facilitate the
-documentation of embedded systems projects and electronic stuff in
-general. It turns out that this portfolio is the perfect medium for
-that. Let the experimentation begin!
+Here is a cool new project. It is a portfolio, complete with electronic
+design documentation features and free webhosting on github.
+
+The main idea that sparked this project was to carve-out a little
+space on the internet to display realisations and stuff.
+
+As you see here, it was very easy to put together a site to facilitate
+the documentation of embedded systems projects and electronic stuff in
+general. The real kicker is that GitHub will let you host this kind of
+Jekyll website directly from your account. So you edit, commit, push/pull
+and the build process is automated up to the deploy. This looked like
+the perfect medium for a portfolio. So let the experimentation begin!
+
+### Cloning this site
+
+Feel free to clone this repo and add your own content. The license
+configured should let you start your own version of this easily. Let
+me know if you have questions about this, you can [reach me here on my
+linkedin for that](https://linkedin.com/in/francoisperron).
+
+### Note on installation
 
 This site leverages Jekyll with the addition of mermaid and wavedrom.
 It is essentially built with markdown with a few touches of html or
 javascript here and there. It turns out that this syntactic sugar is
 very efficient and clean. Some $\LaTeX$ is sprinkled as well. Here are
-some examples.
+some examples below that should help getting started.
+
+I have not yet produced the instructions to reproduce this. It was
+put together as a quick experiment during the course of a single day
+(I admit it was a busy one, though...) and I will certainly give a few
+pointers if you ask me for them. See contact info above.
 
 ## Timing diagrams:
 
-First order of business: timing diagrams. Here is wavedrom.
+First order of business: timing diagrams. They are super useful to
+represent timming issues found while debugging or as a straight-up
+documentation tool for architecture and design.
 
-This code:
+This wavedrom [tutorial](https://wavedrom.com/tutorial.html) is very informative.
 
-```javascript
-{ "signal": [
-  { "name": "clk",  "wave": "p.....|..." },
-  { "name": "data", "wave": "x.345.x|=.x", "data": ["some", "data", "on the", "bus"] },
-  { "name": "req",  "wave": "0.1...0|1.0" },
-  { "name": "ack",  "wave": "1......|01." }
-]}
-```
+Here is one example:
 
-Renders like this:
 ```wavedrom
 { "signal": [
   { "name": "clk",  "wave": "p.....|..." },
-  { "name": "data", "wave": "x.345.x|=.x", "data": ["some", "data", "on the", "bus"] },
-  { "name": "req",  "wave": "0.1...0|1.0" },
-  { "name": "ack",  "wave": "1......|01." }
-]}
+  { "name": "data", "wave": "x.345.x|=.x", "data": ["put", "some", "data", "here"] },
+  { "name": "req",  "wave": "0.1...0|1.0", node: '..a.......' },
+  { "name": "ack",  "wave": "1......|01.", node: '........b.' }
+],
+edge: ['a~>b t1: max 80ns']}
 ```
 
-This is super usefull to represent timming issues found while debugging
-or as a straight-up documentation tool for architecture and design.
+Produced with this block of code:
+
+````
+```wavedrom
+{ "signal": [
+  { "name": "clk",  "wave": "p.....|..." },
+  { "name": "data", "wave": "x.345.x|=.x", "data": ["put", "some", "data", "here"] },
+  { "name": "req",  "wave": "0.1...0|1.0", node: '..a.......' },
+  { "name": "ack",  "wave": "1......|01.", node: '........b.' }
+],
+edge: ['a~>b t1: max 80ns']}
+```
+````
+
+Nice, innit?
 
 ## Graphs with mermaid
 
-Here is a remake of the classic engineering flowchart with mermaid.
+Here is a remake of the classic engineering flowchart with mermaid:
 
-This mermaid code:
-```
-graph TD
-    A[Does it move?] -->|Yes| B{Should it?}
-    A -->|No| C{Should it?}
-    
-    B -->|Yes| D[No Problem!]
-    B -->|No| E[Apply Duct Tape]
-    
-    C -->|Yes| F[Apply WD-40]
-    C -->|No| G[No Problem!]
-```
-
-Renders as:
 ```mermaid
 graph TD
     A[Does it move?] -->|Yes| B{Should it?}
@@ -90,19 +103,39 @@ graph TD
     C -->|Yes| F[Apply WD-40]
     C -->|No| G[No Problem!]
 ```
+
 There, got that fixed for you ;-)
+
+
+The block of code is:
+````
+```mermaid
+graph TD
+    A[Does it move?] -->|Yes| B{Should it?}
+    A -->|No| C{Should it?}
+    
+    B -->|Yes| D[No Problem!]
+    B -->|No| E[Apply Duct Tape]
+    
+    C -->|Yes| F[Apply WD-40]
+    C -->|No| G[No Problem!]
+```
+````
 
 {% include spacer.html size="3em" %}
 
 ## Classic $\LaTeX$
 
-Who does not love $\LaTeX$? It looks like this is supported too, let's start with a cool integral:
+Who does not love $\LaTeX$? It looks like this is supported too, let's start with an inline equation:
+
+We can just render inline: $e^{j\pi}+1=0$ or then display a cool integral like this:
+
 
 $$
 \int_{-\infty}^{\infty} e^{-x^2} dx
 $$
 
-Now add some cordic computations:
+How about adding some cordic computations with this block:
 
 $$
 \begin{equation}
@@ -125,5 +158,71 @@ y_0
 \end{equation}
 $$
 
-It looks like we have a good templating system to convey ideas and properly document stuff!
+Then some binary/hex arithmetics:
 
+$$
+\begin{array}{rcl}
+\text{Decimal:}         & -48 & \\
+\text{Binary (+48):}    & \phantom{+} 0000\ 0000\ 0011\ 0000 & \text{(16-bit)} \\
+\\
+\text{Invert:}          & \phantom{+} 1111\ 1111\ 1100\ 1111 & \\
+\text{Add 1:}           & +           0000\ 0000\ 0000\ 0001 & \\
+\hline
+\text{Result:}          & \phantom{+} 1111\ 1111\ 1101\ 0000 & \text{(Two's complement)} \\
+\text{Hex:}             & \texttt{0xFFD0} \\
+\end{array}
+$$
+
+All very clear!
+
+### Code snippets for the $\LaTeX$ above:
+
+The literal inline form for the equation: `{% raw %}$e^{j\pi}+1=0${% endraw %}`  
+
+The code block for the integral:
+```
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx
+$$
+````
+
+The cordic matrix multiplication:
+
+````
+$$
+\begin{equation}
+\begin{bmatrix}
+x_n \\
+y_n
+\end{bmatrix} =
+K_{fixed}
+\cdot
+\prod_{i=0}^{n-1} 
+\begin{bmatrix}
+1 & \sigma \cdot \tan(\theta_i) \\
+-\sigma \cdot \tan(\theta_i) & 1
+\end{bmatrix} 
+\cdot
+\begin{bmatrix}
+x_0 \\
+y_0
+\end{bmatrix}
+\end{equation}
+$$
+````
+
+The binary and hexadecimal arithmetics:
+````
+$$
+\begin{array}{rcl}
+\text{Decimal:}         & -48 & \\
+\text{Binary (+48):}    & \phantom{+} 0000\ 0000\ 0011\ 0000 & \text{(16-bit)} \\
+\\
+\text{Invert:}          & \phantom{+} 1111\ 1111\ 1100\ 1111 & \\
+\text{Add 1:}           & +           0000\ 0000\ 0000\ 0001 & \\
+\hline
+\text{Result:}          & \phantom{+} 1111\ 1111\ 1101\ 0000 & \text{(Two's complement)} \\
+\text{Hex:}             & \texttt{0xFFD0} \\
+\end{array}
+$$
+````
