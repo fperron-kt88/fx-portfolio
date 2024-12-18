@@ -341,19 +341,13 @@ All 4 temperature sensors, the 2 flow sensors and the 6
 IMU raw values (accel and gyro) are sent to the streamlit interface in
 real time and update the display.
 
-<div style="margin-top: 40px; text-align: center;">
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/IqowHkFn10U" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-  </iframe>
-</div>
+<a href="https://www.youtube.com/watch?v=IqowHkFn10U" target="_blank">
+    <img src="{{ '/assets/images/esp32_streamlit_video_thumbnail.jpg' | relative_url }}" 
+         alt="Watch on YouTube" 
+         style="width: 100%; max-width: 600px; height: auto; border: 1px solid #ccc; border-radius: 5px;">
+</a>
 
-(If you prefer: [click here to start the video of the experiment demo](https://www.youtube.com/watch?v=IqowHkFn10U))
+(If you don't see the thumbnail: [click here to start the video of the experiment demo](https://www.youtube.com/watch?v=IqowHkFn10U))
 
 So the goal remained simple but are currently achieved: re-implementing
 an access mechanism to 2 flow sensors and 4 one-wire temperature
