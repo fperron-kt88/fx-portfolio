@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "New blog, docs and syntactic sugar show off"
+title: "New blog, docs and syntactic sugar"
 date: 2024-06-17
 categories: projects
 image: /assets/images/new-blog.png
@@ -8,15 +8,28 @@ image: /assets/images/new-blog.png
 
 # {{page.title}}
 
+<!-- Banner Image -->
+<div style="
+  background-image: url('{{ '/assets/images/optimization.webp' | relative_url }}');
+  background-size: cover;
+  background-position: center;
+  height: 200px; /* Adjust height as needed */
+">
+</div>
+
+{% include spacer.html size="3em" %}
+
 Here is a cool new project for me. I always wanted to carve-out a little
 space on the internet to display projects and stuff.
 
-So, the idea here is to put together a site to facilitate the
+The main idea here is to put together a site to facilitate the
 documentation of embedded systems projects and electronic stuff in
-general.
+general. It turns out that this portfolio is the perfect medium for
+that. So let the experimentation begin!
 
-It leverages Jekyll with the addition of mermaid and wavedrom. Here are
-some examples:
+It leverages Jekyll with the addition of mermaid and wavedrom. It turns
+out that this syntactic sugar is very efficient and clean. Some $\LaTeX$
+is sprinkled as well. Here are some examples:
 
 
 ## Timing diagrams:
@@ -44,36 +57,41 @@ Renders like this:
 ]}
 ```
 
+That will be super usefull to convey timming issues found while debugging
+or as a documentation tool for architecture and design.
+
 ## Graphs with mermaid
 
-Here is some classic "debugging" flowcharting with mermaid.
+Here is a remake of the classi engineering flowchart with mermaid.
 
 This mermaid code:
 ```
 graph TD
-    A[Does it move?] -->|Yes| B{Should it move?}
-    A -->|No| C{Should it move?}
+    A[Does it move?] -->|Yes| B{Should it?}
+    A -->|No| C{Should it?}
     
     B -->|Yes| D[No Problem!]
     B -->|No| E[Apply Duct Tape]
     
     C -->|Yes| F[Apply WD-40]
-    C -->|No| D[No Problem!]
+    C -->|No| G[No Problem!]
 ```
 
+Renders as:
 ```mermaid
 graph TD
-    A[Does it move?] -->|Yes| B{Should it move?}
-    A -->|No| C{Should it move?}
+    A[Does it move?] -->|Yes| B{Should it?}
+    A -->|No| C{Should it?}
     
     B -->|Yes| D[No Problem!]
     B -->|No| E[Apply Duct Tape]
     
     C -->|Yes| F[Apply WD-40]
-    C -->|No| D[No Problem!]
-
+    C -->|No| G[No Problem!]
 ```
+There, got that fixed for you ;-)
 
+{% include spacer.html size="3em" %}
 
 ## Classic $\LaTeX$
 
@@ -106,7 +124,5 @@ y_0
 \end{equation}
 $$
 
-
-[Visit Project](https://example.com)
-
+It looks like we have a good templating system to convey ideas and document stuff!
 
