@@ -23,7 +23,7 @@ asking Dall-E to help me with the visuals." %}
 
 # {{page.title}}
 
-Here is a recent one. The code is [in this github repo](https://github.com/fperron-kt88/fx-grpc-auto-detect)
+Here is a recent one. The code is [in this github repo](https://github.com/fperron-kt88/fx-grpc-auto-detect).
 
 <div class="image-stack-wrapper">
   <div class="diagonal-stack">
@@ -77,7 +77,7 @@ Here is a recent one. The code is [in this github repo](https://github.com/fperr
 
 .diagonal-bottom {
   top: 100px; /* Vertical offset for diagonal stacking */
-  left: 60px; /* Adjust as needed for horizontal overlap */
+  left: 30px; /* Adjust as needed for horizontal overlap */
   z-index: 1;
 }
 
@@ -90,9 +90,9 @@ Here is a recent one. The code is [in this github repo](https://github.com/fperr
   float: right;
   width: 50%; /* Adjust based on available space */
   margin-left: 10px;
-  shape-outside: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  height: 300px; /* Matches the `.diagonal-stack` height */
+  shape-outside: polygon(0% 0%, 90% 0%, 90% 90%, 0% 90%);
+  clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%); /* Larger polygon */
+  height: 330px; /* Matches the `.diagonal-stack` height */
 }
 </style>
 
@@ -108,6 +108,9 @@ For this system though, free cycles were simply used to integrate the
 inertial platform and a servo to form a tight PID loop that turned very
 useful for debugging. More on this later. In hindsight, there would have
 been ample space for an RTOS. So, that seed is planted now.
+
+Let's first describe the system in its first iteration as a viable
+IoT interface and for this first jot in C++.
 
 ## General concept
 
