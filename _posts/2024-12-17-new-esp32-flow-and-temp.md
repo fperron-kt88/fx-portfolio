@@ -349,14 +349,20 @@ real time and update the display.
 
 (If you don't see the thumbnail: [click here to start the video of the experiment demo](https://www.youtube.com/watch?v=IqowHkFn10U))
 
-So the goal remained simple but are currently achieved: re-implementing
-an access mechanism to 2 flow sensors and 4 one-wire temperature
-sensors, while maintaining a proper communication channel with a backend
-interface. The live data updates to the FPGA driven display came-in later,
-but blended in very gracefully.
+So the goal remained simple to reconnect everythinf and all has been
+achieved: re-implementing an access mechanism to 2 flow sensors and 4
+one-wire temperature sensors, while maintaining a proper communication
+channel with a backend interface. The live data updates to the FPGA
+driven display came-in later, but blended in very gracefully.
 
-So, as this projet became a shim layer between a backend in python/fastapi and
-firmware in a FPGA that is still under development, more documentation is bound to follow... 
+I'll come back to present the device identification, build id and git
+version information. The algorithm used for the flow calculation is also
+interesting, same thing for the kalman filter (although this one is of
+a rather basic vanilla flavour here...)
+
+So, as this projet became a shim layer between a backend in python/fastapi
+and firmware in a FPGA that is still under development, more documentation
+is bound to follow...
 
 Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
