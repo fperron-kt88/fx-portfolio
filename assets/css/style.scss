@@ -6,3 +6,19 @@
 footer p {
   font-size: 0.8em;
 }
+
+.circular-image {
+  float: left;
+  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circular-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+

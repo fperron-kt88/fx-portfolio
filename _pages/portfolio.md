@@ -5,6 +5,10 @@ permalink: /portfolio/
 author_profile: true
 ---
 
+**December 2024 - update**
+
+This portfolio is brand new! Content is appearing here as I dig into the documents of the past and treat them to look modern in 2024. Bookmark this and comeback soon!
+
 ## Projects
 
 {% for post in site.posts %}
