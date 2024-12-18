@@ -23,8 +23,9 @@ is stronger than ever: to design, code, and tune systems that **make
 things dance together**—robots, chips, sensors, data, energy systems,
 and algorithms.
 
-### What’s your next big idea?  **How can I help you achieve your
-goals?**
+### What’s your next big idea?
+
+**How can I help you achieve your goals?**
 
 Over the years, I’ve led startups, taught electronics, and worked across
 the public and private sectors, helping turn ambitious ideas into tangible
