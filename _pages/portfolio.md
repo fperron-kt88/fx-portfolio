@@ -14,10 +14,10 @@ Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
 the chat</a> and comeback soon!
 
-## Projects
+# Projects
 
 {% for post in site.posts %}
-  <h3>{{ post.title }}</h3>
+  <h2>{{ post.title }}</h2>
   <p>{{ post.excerpt }}</p>
   <a href="{{ post.url | relative_url }}">Read more</a>
   <hr>

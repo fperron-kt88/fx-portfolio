@@ -10,7 +10,7 @@ permalink: /about/
 
 ## About Me  
 
-Hi, I’m **François Perron**, a former engineer turned systems hacker
+Hi, I’m **François**, a former engineer turned systems hacker
 with a lifelong drive to **build**, **fix**, and **optimize**. From
 high-speed digital design, FPGAs and microcontrollers to reverse proxies and
 cloud infrastructure, I thrive at the intersection of **hardware and

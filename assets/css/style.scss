@@ -27,7 +27,9 @@ footer p {
   border: 1px solid #5d910b;
   background: linear-gradient(#93bd20, #659e10);
   border-radius: 2px;
-  box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 7px rgba(0,0,0,.7);
+  box-shadow:
+    inset 0px 1px 0px rgba(255, 255, 255, 0.3),
+    0px 3px 7px rgba(0, 0, 0, 0.7);
   padding: 10px 12px;
   font-size: 14px;
   text-align: center;
@@ -38,12 +40,30 @@ footer p {
   &:hover {
     background: linear-gradient(#749619, #527f0e);
     border: 1px solid #527f0e;
-    box-shadow: inset 0px 1px 1px rgba(0,0,0,.2), 0px 1px 0px rgba(0,0,0,.0);
+    box-shadow:
+      inset 0px 1px 1px rgba(0, 0, 0, 0.2),
+      0px 1px 0px rgba(0, 0, 0, 0);
   }
 }
 
 ul {
   list-style-type: disc;
   padding-left: 30px;
+}
+
+h1 {
+  font-size: 36px; /* Increase size for # headings */
+}
+
+h2 {
+  font-size: 30px; /* Increase size for ## headings */
+}
+
+h3 {
+  font-size: 26px; /* Increase size for ### headings */
+}
+
+h1, h2, h3 {
+  line-height: 1.3; /* Optional: Adjust line height for all headings */
 }
 
