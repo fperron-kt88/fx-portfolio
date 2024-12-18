@@ -19,18 +19,19 @@ image: /assets/images/new-blog.png
 
 {% include spacer.html size="3em" %}
 
-Here is a cool new project for me. I always wanted to carve-out a little
+Here is a cool new project. The main idea is to carve-out a little
 space on the internet to display projects and stuff.
 
-The main idea here is to put together a site to facilitate the
+So, let's put together a site to facilitate the
 documentation of embedded systems projects and electronic stuff in
 general. It turns out that this portfolio is the perfect medium for
-that. So let the experimentation begin!
+that. Let the experimentation begin!
 
-It leverages Jekyll with the addition of mermaid and wavedrom. It turns
-out that this syntactic sugar is very efficient and clean. Some $\LaTeX$
-is sprinkled as well. Here are some examples:
-
+This site leverages Jekyll with the addition of mermaid and wavedrom.
+It is essentially built with markdown with a few touches of html or
+javascript here and there. It turns out that this syntactic sugar is
+very efficient and clean. Some $\LaTeX$ is sprinkled as well. Here are
+some examples.
 
 ## Timing diagrams:
 
@@ -41,9 +42,9 @@ This code:
 ```javascript
 { "signal": [
   { "name": "clk",  "wave": "p.....|..." },
-  { "name": "data", "wave": "x.345x|=.x", "data": ["some", "data", "on the", "bus"] },
-  { "name": "req",  "wave": "0.1..0|1.0" },
-  { "name": "ack",  "wave": "1.....|01." }
+  { "name": "data", "wave": "x.345.x|=.x", "data": ["some", "data", "on the", "bus"] },
+  { "name": "req",  "wave": "0.1...0|1.0" },
+  { "name": "ack",  "wave": "1......|01." }
 ]}
 ```
 
@@ -51,18 +52,18 @@ Renders like this:
 ```wavedrom
 { "signal": [
   { "name": "clk",  "wave": "p.....|..." },
-  { "name": "data", "wave": "x.345x|=.x", "data": ["some", "data", "on the", "bus"] },
-  { "name": "req",  "wave": "0.1..0|1.0" },
-  { "name": "ack",  "wave": "1.....|01." }
+  { "name": "data", "wave": "x.345.x|=.x", "data": ["some", "data", "on the", "bus"] },
+  { "name": "req",  "wave": "0.1...0|1.0" },
+  { "name": "ack",  "wave": "1......|01." }
 ]}
 ```
 
-That will be super usefull to convey timming issues found while debugging
-or as a documentation tool for architecture and design.
+This is super usefull to represent timming issues found while debugging
+or as a straight-up documentation tool for architecture and design.
 
 ## Graphs with mermaid
 
-Here is a remake of the classi engineering flowchart with mermaid.
+Here is a remake of the classic engineering flowchart with mermaid.
 
 This mermaid code:
 ```
@@ -124,5 +125,5 @@ y_0
 \end{equation}
 $$
 
-It looks like we have a good templating system to convey ideas and document stuff!
+It looks like we have a good templating system to convey ideas and properly document stuff!
 
