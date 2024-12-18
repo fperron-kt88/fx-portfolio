@@ -38,7 +38,18 @@
             },
         });
     });
-</script>
-<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
-<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+    document.addEventListener("DOMContentLoaded", function () {
+        const cookieBanner = document.querySelector(".cc-window");
+        const messagingApp = document.querySelector(".tidio-chat"); // Adjust if needed
 
+        if (cookieBanner && messagingApp) {
+            const messagingAppHeight = messagingApp.offsetHeight;
+            const bannerHeight = cookieBanner.offsetHeight;
+
+            // Move the cookie banner above the messaging app
+            cookieBanner.style.bottom = `${messagingAppHeight + 20}px`;
+        }
+    });
+</script>
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any" />
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}" />
