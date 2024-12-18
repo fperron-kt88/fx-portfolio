@@ -3,6 +3,7 @@ name: "François Perron"
 description: "Musings involving electronics, systems, and stuff I care about."
 baseurl: "/fx-portfolio" # Leave this empty for the root
 url: "https://fperron-kt88.github.io"
+google_analytics: "G-xxxxxxxxxx"
 
 #author:
 #  name: "François Perron"
