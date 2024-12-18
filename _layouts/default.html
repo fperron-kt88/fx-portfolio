@@ -57,10 +57,21 @@
         {% include head-custom.html %}
     </head>
     <body>
+        {% if jekyll.environment == "production" %}
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-N3339PFR"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        {% endif %}
+
         <div id="header">
-            <nav>
-                {% include nav.html %}
-            </nav>
+            <nav>{% include nav.html %}</nav>
         </div>
 
         <div class="wrapper">
@@ -94,7 +105,10 @@
         <footer>
             <p style="text-align: center">
                 &copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights
-                reserved. <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
+                reserved.
+                <a href="{{ '/privacy-policy/' | relative_url }}"
+                    >Privacy Policy</a
+                >
             </p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
