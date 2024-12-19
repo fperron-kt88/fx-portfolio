@@ -23,7 +23,7 @@ Here is a cool new project. It is a portfolio, complete with electronic
 design documentation features and free webhosting on github.
 
 The main idea that sparked this project was to carve-out a little
-space on the internet to display realisations and stuff.
+space on the internet to display realisations and general stuff.
 
 As you see here, it was very easy to put together a site to facilitate
 the documentation of embedded systems projects and electronic stuff in
@@ -34,10 +34,10 @@ the perfect medium for a portfolio. So let the experimentation begin!
 
 ### Cloning this site
 
-Feel free to clone this repo and add your own content. The license
-configured should let you start your own version of this easily. Let
-me know if you have questions about this, you can [reach me here on my
-linkedin for that](https://linkedin.com/in/francoisperron).
+Feel free to [clone this repo](https://github.com/fperron-kt88/fx-portfolio)
+and add your own content. The license configured should let you start your own version
+of this easily. Let me know if you have questions about this, you can
+[reach me here on my linkedin for that](https://linkedin.com/in/francoisperron).
 
 ### Note on installation
 
