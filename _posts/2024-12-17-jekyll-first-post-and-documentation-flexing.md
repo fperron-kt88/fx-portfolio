@@ -20,10 +20,10 @@ image: /assets/images/new-blog.png
 # {{page.title}}
 
 Here is a cool new project. It is a portfolio, complete with electronic
-design documentation features and free webhosting on github.
+design documentation features and free web hosting on github.
 
-The main idea that sparked this project was to carve-out a little
-space on the internet to display realisations and general stuff.
+The main idea that sparked the creation of this project was to carve out
+a little space on the internet to display realizations and general stuff.
 
 As you see here, it was very easy to put together a site to facilitate
 the documentation of embedded systems projects and electronic stuff in
@@ -34,31 +34,34 @@ the perfect medium for a portfolio. So let the experimentation begin!
 
 ### Cloning this site
 
-Feel free to [clone this repo](https://github.com/fperron-kt88/fx-portfolio)
-and add your own content. The license configured should let you start your own version
-of this easily. Let me know if you have questions about this, you can
-[reach me here on my linkedin for that](https://linkedin.com/in/francoisperron).
+Feel free to [clone this
+repo](https://github.com/fperron-kt88/fx-portfolio) and add your own
+content. The license configured should let you start your own version of
+this easily. Let me know if you have questions about this, you can [reach
+me here on my LinkedIn for that](https://linkedin.com/in/francoisperron).
 
 ### Note on installation
 
-This site leverages Jekyll with the addition of mermaid and wavedrom.
+This site leverages Jekyll with the addition of mermaid and WaveDrom.
 It is essentially built with markdown with a few touches of html or
-javascript here and there. It turns out that this syntactic sugar is
+JavaScript here and there. It turns out that this syntactic sugar is
 very efficient and clean. Some $\LaTeX$ is sprinkled as well. Here are
 some examples below that should help getting started.
 
 I have not yet produced the instructions to reproduce this. It was
-put together as a quick experiment during the course of a single day
-(I admit it was a busy one, though...) and I will certainly give a few
-pointers if you ask me for them. See contact info above.
+put together as a quick experiment during the course of a single
+day (I admit it was a busy one, though...) and I will certainly
+give a few pointers if you ask me for them [on my LinkedIn
+here](https://linkedin.com/in/francoisperron).
 
 ## Timing diagrams:
 
 First order of business: timing diagrams. They are super useful to
-represent timming issues found while debugging or as a straight-up
+represent timing issues found while debugging or as a straight up
 documentation tool for architecture and design.
 
-This wavedrom [tutorial](https://wavedrom.com/tutorial.html) is very informative.
+This WaveDrom [tutorial](https://wavedrom.com/tutorial.html) is very
+informative.
 
 Here is one example:
 
@@ -96,27 +99,27 @@ Here is a remake of the classic engineering flowchart with mermaid:
 graph TD
     A[Does it move?] -->|Yes| B{Should it?}
     A -->|No| C{Should it?}
-    
+
     B -->|Yes| D[No Problem!]
     B -->|No| E[Apply Duct Tape]
-    
+
     C -->|Yes| F[Apply WD-40]
     C -->|No| G[No Problem!]
 ```
 
 There, got that fixed for you ;-)
 
-
 The block of code is:
+
 ````
 ```mermaid
 graph TD
     A[Does it move?] -->|Yes| B{Should it?}
     A -->|No| C{Should it?}
-    
+
     B -->|Yes| D[No Problem!]
     B -->|No| E[Apply Duct Tape]
-    
+
     C -->|Yes| F[Apply WD-40]
     C -->|No| G[No Problem!]
 ```
@@ -126,10 +129,11 @@ graph TD
 
 ## Classic $\LaTeX$
 
-Who does not love $\LaTeX$? It looks like this is supported too, let's start with an inline equation:
+Who does not love $\LaTeX$? It looks like this is supported too, let's
+start with an inline equation:
 
-We can just render inline: $e^{j\pi}+1=0$ or then display a cool integral like this:
-
+We can just render inline: $e^{j\pi}+1=0$ or then display a cool integral
+like this:
 
 $$
 \int_{-\infty}^{\infty} e^{-x^2} dx
@@ -145,11 +149,11 @@ y_n
 \end{bmatrix} =
 K_{fixed}
 \cdot
-\prod_{i=0}^{n-1} 
+\prod_{i=0}^{n-1}
 \begin{bmatrix}
 1 & \sigma \cdot \tan(\theta_i) \\
 -\sigma \cdot \tan(\theta_i) & 1
-\end{bmatrix} 
+\end{bmatrix}
 \cdot
 \begin{bmatrix}
 x_0 \\
@@ -158,7 +162,7 @@ y_0
 \end{equation}
 $$
 
-Then some binary/hex arithmetics:
+Then some binary/hex arithmetic:
 
 $$
 \begin{array}{rcl}
@@ -177,18 +181,21 @@ All very clear!
 
 ### Code snippets for the $\LaTeX$ above:
 
-The literal inline form for the equation: `{% raw %}$e^{j\pi}+1=0${% endraw %}`  
+Here are the commands you need to put in the markdown to generate the
+$\LaTeX$ included here. The literal inline form for the equation is: `{%
+raw %}$e^{j\pi}+1=0${% endraw %}`
 
 The code block for the integral:
+
 ```
 $$
 \int_{-\infty}^{\infty} e^{-x^2} dx
 $$
-````
+```
 
 The cordic matrix multiplication:
 
-````
+```
 $$
 \begin{equation}
 \begin{bmatrix}
@@ -197,11 +204,11 @@ y_n
 \end{bmatrix} =
 K_{fixed}
 \cdot
-\prod_{i=0}^{n-1} 
+\prod_{i=0}^{n-1}
 \begin{bmatrix}
 1 & \sigma \cdot \tan(\theta_i) \\
 -\sigma \cdot \tan(\theta_i) & 1
-\end{bmatrix} 
+\end{bmatrix}
 \cdot
 \begin{bmatrix}
 x_0 \\
@@ -209,10 +216,11 @@ y_0
 \end{bmatrix}
 \end{equation}
 $$
-````
+```
 
-The binary and hexadecimal arithmetics:
-````
+The binary and hexadecimal arithmetic:
+
+```
 $$
 \begin{array}{rcl}
 \text{Decimal:}         & -48 & \\
@@ -225,4 +233,14 @@ $$
 \text{Hex:}             & \texttt{0xFFD0} \\
 \end{array}
 $$
-````
+```
+
+## In conclusion
+
+So, there we are. A brand new blog to experiment documenting electronics
+and embedded projects, on the web and directly as a github repo.
+
+{% include spacer.html size="5rem" %}
+Don't forget to <a href="javascript:;"
+onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
+the chat</a> and comeback soon!

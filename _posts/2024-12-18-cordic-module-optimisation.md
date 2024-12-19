@@ -20,14 +20,18 @@ asking Dall-E to help me with the visuals." %}
 
 # {{page.title}}
 
-Another recent one, this time mainly in verilog. The code is
-[in this github repo](https://github.com/fperron-kt88/fx-cyclone-v-gx-video-horizon-indicator).
+Another recent one, this time mainly in verilog. The main
+algorithm code is inline below, but I have a more comprehensive
+repo with testbenches and an integration [in this github
+repo](https://github.com/fperron-kt88/fx-cyclone-v-gx-video-horizon-indicator).
+I can make it available to you on a limited basis if you contact me on my
+[LinkedIn](https://linkedin.com/in/francoisperron).
 
-As discussed in the [ESP32 Flow and Temperature Project](/fx-portfolio/projects/2024/06/17/new-esp32-flow-and-temp.html)
+As discussed in the [ESP32 Flow and Temperature
+Project](/fx-portfolio/projects/2024/06/17/new-esp32-flow-and-temp.html)
 project, an IMU platform is used to rotate an image on an hdmi screen. The
 bar graphs displayed on the hdmi screen can be dynamically rotated by
 an angle coming from the roll of the IMU platform.
-
 
 ```mermaid
 flowchart LR
@@ -45,26 +49,26 @@ flowchart LR
     D -->| Rotated \n bar graph| E
 ```
 
-The angle of the roll is fed into the a cordic module to compute separate
+The angle of the roll is fed into a cordic module to compute separate
 sin and cos values. These values are then fed into the hdmi module to
 prepare a rotation matrix used to properly rotate the pixels to display.
 
 The CORDIC - (COordinate Rotation DIgital Computer) algorithm was
 selected for the task of finding the cos and sin of an angle because it
-is an intersting case of very efficient mathematical optimisation as
+is an interesting case of very efficient mathematical optimisation as
 an iterative process that is very well suited for FPGA implementation
 in a FSM (Finite State Machine) using only additions and bit shifts to
-replace multiplication.  It is very efficient in that very few resources
+replace multiplication. It is very efficient in that very few resources
 are required. The algorithm can be tuned to reach high precision when
 required. We typically reach a precision of 0.0001 or better with this
 implementation.
 
 The idea here is to present first the basic mathematical optimization. A
-fixed point implementation is described next with acompanying verilog.
+fixed point implementation is described next with accompanying verilog.
 
 ## Inspiration
 
-The material here is inspired from an excellent in depth article[^1]. 
+The material here is inspired from an excellent in depth article[^1].
 
 [^1]: [All about circuits, an introduction to the cordic algorithm](https://www.allaboutcircuits.com/technical-articles/an-introduction-to-the-cordic-algorithm/)
 
@@ -77,7 +81,7 @@ while cos represents its horizontal component.
 
 The concept of the algorithm is to iteratively rotate a vector using
 a set of known rotation angles until a good match is reached with the
-input angle. Each sucessive rotation is smaller than the previous and
+input angle. Each successive rotation is smaller than the previous and
 modifies the x and y components values of the rotating vector until the
 desired precision is reached. In our case, the iteration number is 16,
 regardless of the precision reached, as simulation has proven a known
@@ -126,14 +130,14 @@ and efficient to compute with the hardware present in an FPGA.
 ### The path to optimization
 
 We have to get rid of costly multiplications. Let's consider an
-iterative approach.  The first order of business is to accept that we
+iterative approach. The first order of business is to accept that we
 can reconstruct any rotation angle by summing or subtracting known
 rotation angles that are carefully selected. In other words, we can
 always superpose our constructed vector on top of the desired one given
 16 attempts at rotating it by picking into a set of precomputed angles.
 
 To help picture these sequential rotations, we can compose transformations
-based off of eq.2. Let's factor-out $\cos{\theta_1}$ to represent
+based off of eq.2. Let's factor out $\cos{\theta_1}$ to represent
 one rotation.
 
 $$
@@ -141,7 +145,7 @@ $$
 \begin{bmatrix}
 x_1 \\
 y_1
-\end{bmatrix} = 
+\end{bmatrix} =
 \cos{\theta_1}
 \begin{bmatrix}
 1 & \tan(\theta_1) \\
@@ -188,7 +192,7 @@ y_n
 \end{bmatrix} =
 \prod_{i=0}^{n-1} \cos{\theta_i}
 \cdot
-\prod_{i=0}^{n-1} 
+\prod_{i=0}^{n-1}
 \begin{bmatrix}
 1 & \tan(\theta_i) \\
 -\tan(\theta_i) & 1
@@ -207,7 +211,7 @@ function, it will stay positive for angles within $[-\frac{\pi}{2},
 \frac{\pi}{2}]$. Then, since we are using smaller angles, $cos$ approaches
 1 and in the algorithm, the product converges towards a constant number $K_{fixed} \approxeq 0.6072$.
 
-Similarily, and since $cos$ is pair while $sin$ is odd in the considered
+Similarly, and since $cos$ is pair while $sin$ is odd in the considered
 domain, we infer that $\tan$ will be odd. All this to say that the sign
 of the angle can be factored out and the equation eq.6 really is:
 
@@ -219,7 +223,7 @@ y_n
 \end{bmatrix} =
 K_{fixed}
 \cdot
-\prod_{i=0}^{n-1} 
+\prod_{i=0}^{n-1}
 \begin{bmatrix}
 1 & \sigma \cdot \tan(\theta_i) \\
 -\sigma \cdot \tan(\theta_i) & 1
@@ -232,12 +236,12 @@ y_0
 \end{equation}
 $$
 
-With $\sigma$ taking the value +1 for counter-clock-wise rotation and
--1 for clock-wise rotations while $\theta_i$ remains always positive.
+With $\sigma$ taking the value +1 for counterclockwise rotation and
+-1 for clockwise rotations while $\theta_i$ remains always positive.
 
 So, we got rid of some complexity, at the expense of a scaling factor
 $K_{fixed}$. Since we have to start the algorithm with a vector of length
-one as the first vector to be rotated, we can pre-multiply this vector
+one as the first vector to be rotated, we can premultiply this vector
 by a constant. All that is involved is to set $(x_0, y_0) = (K_{fixed},
 0)=(0.6072, 0)$ and the multiplying factor is now baked into the algorithm.
 
@@ -254,12 +258,12 @@ $$
 ### No more conventional multiplications
 
 This choice leads to two very important consequences. The first
-consequence of the angle selection is that the matricies all become very
+consequence of the angle selection is that the matrices all become very
 easy to implement, taking n=16 as an example and all positive angle rotations:
 
 $$
 \begin{equation}
-\prod_{i=0}^{n-1} 
+\prod_{i=0}^{n-1}
 \begin{bmatrix}
 1 & \tan(\theta_i) \\
 -\tan(\theta_i) & 1
@@ -287,7 +291,7 @@ $$
 We effectively transformed the matrices into multiplications by powers
 of 2 and, as you may have anticipated, these are equivalent to very
 simple and efficient bit shifts. All of the operations required within
-the $\prod$ are now signed additions or sign-extended bit-shifts. These
+the $\prod$ are now signed additions or sign extended bit shifts. These
 happen to map very efficiently to hardware ressources in an FPGA. No
 more conventional multiplications whatsoever.
 
@@ -300,7 +304,7 @@ Talking about the angles, the second consequence of their specific
 selection is that these $\theta_i$ are all precomputed and equal to
 $\theta_i = \arctan(2^{-i})$. This yields a series of 16 progressively
 smaller angle increments at our disposal that converge to be about half
-of the preceeding one. The first angle is $\frac{\pi}{4}$, the last angle
+of the preceding one. The first angle is $\frac{\pi}{4}$, the last angle
 being $\arctan(2^{-15}) \approxeq 0.00003$, or less than $0.002 ^\circ$.
 
 Selectively adding or subtracting these angles can lead to reconstruct
@@ -310,7 +314,7 @@ $0.00003$ rad.
 ### Putting it all together
 
 So, on one side we have a very easy to compute rotation matrix using
-any of the the $\tan(\theta_i)$ values, and on the other side we have
+any of the $\tan(\theta_i)$ values, and on the other side we have
 very specific angles that we know in advance and that are associated
 with each and every easy to compute rotation matrix.
 
@@ -319,14 +323,14 @@ recognize that by carefully selecting the sign of these 16 rotations,
 one can reconstruct on the fly just about any angle in the range. And the
 algorithm does just about that: step rotations are performed starting with
 the bigger angles and through to the smallest. The x and y components
-of the rotated output vector are summed-up at each step, representing
+of the rotated output vector are summed up at each step, representing
 the cos and sin of the internal vector chasing the requested angle.
 
 The real kicker is that the algorithm will just pick the next rotation
 as either a positive or a negative one and so that the vector would
 go closest to the desired angle. This is a feedback loop of sorts that
 uses imposed angles but decides if it should add or subtract the angle
-to its own advantage in the goal of ending on the required final angle. 
+to its own advantage in the goal of ending on the required final angle.
 
 The result is that the 16 rotations will bring the reconstructed angle
 of the internal vector closer to the desired angle until they match
@@ -450,7 +454,7 @@ The algorithm, once translated into HDL code (verilog), can easily produce
 means that a single cordic unit running at 50MHz can easily output
 the values within 170ns of being presented with an input. More than
 5.8 million updates per second. The sin and cos errors are within an
-absolute error of 0.0002 and the concentricity error (pythagorean length)
+absolute error of 0.0002 and the concentricity error (Pythagorean length)
 is within 0.0004 units of the unit circle. That is 0.02% error on the
 sin or cos and 0.04% error on the concentricity.
 
@@ -459,7 +463,7 @@ step sizes with regards to modern FPGAs. It consumes much less than 1%
 of a cyclone V ressources.
 
 If you want to see the algorithm working, please look into the project
-youtube video where the roll input of the IMU is set to a cordic to compute
+YouTube video where the roll input of the IMU is set to a cordic to compute
 the cos and sin values used to rotate the bar graph. Smooth!
 
 <a href="https://youtu.be/IqowHkFn10U?t=90" target="_blank">
@@ -471,4 +475,3 @@ the cos and sin values used to rotate the bar graph. Smooth!
 Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
 the chat</a> and comeback soon!
-
