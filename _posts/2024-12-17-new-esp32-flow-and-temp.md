@@ -23,7 +23,9 @@ asking Dall-E to help me with the visuals." %}
 
 # {{page.title}}
 
-Here is a recent one. The code is [in this github repo](https://github.com/fperron-kt88/fx-grpc-auto-detect).
+Here is a recent one. The code is [in this github
+repo](https://github.com/fperron-kt88/fx-grpc-auto-detect). It should be
+made availlable soon.
 
 <div class="image-stack-wrapper">
   <div class="diagonal-stack">
@@ -349,21 +351,43 @@ real time and update the display.
 
 (If you don't see the thumbnail: [click here to start the video of the experiment demo](https://www.youtube.com/watch?v=IqowHkFn10U))
 
-So the goal remained simple to reconnect everythinf and all has been
-achieved: re-implementing an access mechanism to 2 flow sensors and 4
-one-wire temperature sensors, while maintaining a proper communication
-channel with a backend interface. The live data updates to the FPGA
-driven display came-in later, but blended in very gracefully.
+So we reached the goal of reconnecting everything.  We have an access
+mechanism to 2 flow sensors and 4 one-wire temperature sensors, while
+maintaining a proper communication channel with a backend interface. The
+live data updates to the FPGA driven display came-in later, but blended
+in very gracefully.
 
-I'll come back to present the device identification, build id and git
-version information. The algorithm used for the flow calculation is also
-interesting, same thing for the kalman filter (although this one is of
-a rather basic vanilla flavour here...)
+The current software implemetnation is very easy to extend, but a few
+key refactor will make it more SOLID and easier even to refactor. This
+is currently in the works.
 
-So, as this projet became a shim layer between a backend in python/fastapi
-and firmware in a FPGA that is still under development, more documentation
-is bound to follow...
+I'll also come back to present the device identification, build id and
+git version information. The algorithm used for the flow calculation is
+also interesting, same thing for the kalman filter (although this one
+is of a rather basic vanilla flavour here...).
 
+So, in summary: as this projet became a shim layer between a
+backend in python/fastapi and firmware in a FPGA that is still under
+development, it became quite clear that the framework is very useful
+in my lab. Consequently, more content and documentation here is bound
+to follow...
+
+{% include spacer.html size="5rem" %}
 Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
 the chat</a> and comeback soon!
+
+
+{% include spacer.html size="20rem" %}
+
+# Afterthoughts
+
+2024-12-18 TODO: Wouldn't it be nice if a standard C++ library
+would already provide generalized interface to sensors? This must be
+already solved for IoT, right?
+- lm-sensors
+- sensorfusion
+- ThingSpeak
+- Zetta
+- Adafruit Unified Sensor Library
+- MBED OS
