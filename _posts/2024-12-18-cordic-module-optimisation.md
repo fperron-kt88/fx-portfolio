@@ -457,3 +457,18 @@ sin or cos and 0.04% error on the concentricity.
 The algorithm, as designed, can be extended to near arbitrary width and
 step sizes with regards to modern FPGAs. It consumes much less than 1%
 of a cyclone V ressources.
+
+If you want to see the algorithm working, please look into the project
+youtube video where the roll input of the IMU is set to a cordic to compute
+the cos and sin values used to rotate the bar graph. Smooth!
+
+<a href="https://youtu.be/IqowHkFn10U?t=90" target="_blank">
+    <img src="{{ '/assets/images/esp32_streamlit_video_thumbnail.jpg' | relative_url }}" 
+         alt="Watch on YouTube" 
+         style="width: 100%; max-width: 600px; height: auto; border: 1px solid #ccc; border-radius: 5px;">
+</a>
+
+Don't forget to <a href="javascript:;"
+onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
+the chat</a> and comeback soon!
+
