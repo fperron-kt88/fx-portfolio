@@ -67,3 +67,14 @@ h1, h2, h3 {
   line-height: 1.3; /* Optional: Adjust line height for all headings */
 }
 
+code[class*="linenos"] td.rouge-line-number {
+    text-align: right;
+    vertical-align: top;
+    padding-right: 10px;
+    color: #888;
+}
+
+code[class*="linenos"] td.rouge-code {
+    padding-left: 10px;
+}
+

@@ -3,7 +3,6 @@ name: "François Perron"
 description: "Musings involving electronics, systems, and stuff hackers care about."
 baseurl: "/fx-portfolio" # Leave this empty for the root
 url: "https://fperron-kt88.github.io"
-google_analytics: "G-xxxxxxxxxx"
 
 #author:
 #  name: "François Perron"
@@ -52,3 +51,7 @@ collections:
     output: true
     permalink: /:path/
 
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    line_numbers: false

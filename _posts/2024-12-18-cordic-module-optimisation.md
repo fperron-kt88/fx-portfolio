@@ -352,7 +352,7 @@ Here is the verilog code to implement the algorithm. I am currently
 looking into a neat way to display line numbers and will be back with a few
 comments on specific lines.
 
-```verilog
+{% highlight verilog linenos %}
 module cordic #(
     // Internal parameters and signals
     parameter INTERNAL_WIDTH = 17,
@@ -445,7 +445,7 @@ module cordic #(
         end
     end
 endmodule
-```
+{% endhighlight %}
 
 ### Performance
 
