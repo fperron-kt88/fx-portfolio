@@ -52,14 +52,15 @@ sin and cos values. These values are then fed into the hdmi module to
 prepare a rotation matrix used to properly rotate the pixels to display.
 
 The CORDIC - (COordinate Rotation DIgital Computer) algorithm was
-selected for the task of finding the cos and sin of an angle because it
-is an interesting case of very efficient mathematical optimisation as
-an iterative process that is very well suited for FPGA implementation
-in a FSM (Finite State Machine) using only additions and bit shifts to
-replace multiplication. It is very efficient in that very few resources
-are used and that they run fast. The algorithm can be tuned to reach
-high precision when required. We typically reach a precision of 0.0001
-or better with this implementation.
+selected for the task of finding the cos and sin of an angle because
+it is an interesting case of very efficient mathematical optimisation.
+It is usually found as an iterative process that is very well suited
+for FPGA implementation in a FSM (Finite State Machine) using only
+additions and bit shifts to replace multiplication. The algorithm is
+very efficient in that very few resources are used and that they run
+fast. The specific implementation can be tuned to reach high precision
+when required. We typically reach a precision of 0.0001 or better with
+the code presented here.
 
 The idea here is to first present the basic mathematical optimization. A
 fixed point implementation is described next with accompanying verilog.
@@ -481,7 +482,7 @@ new sin and cos values of the angle_in as requested.
   <div class="diagonal-stack">
     <img 
       src="{{ '/assets/images/cordic-timing-zoom.png' | relative_url }}" 
-      alt="Top View ESP32 Project Image" 
+      alt="cordic top view image" 
       class="stacked-image diagonal-top" 
       onclick="openImage('{{ '/assets/images/cordic-timing-zoom.png' | relative_url }}')">
   </div>
@@ -619,7 +620,7 @@ the concentricity.
 
 <a href="https://youtu.be/IqowHkFn10U?t=90" target="_blank">
     <img src="{{ '/assets/images/esp32_streamlit_video_thumbnail.jpg' | relative_url }}" 
-         alt="Watch on YouTube" 
+         alt="Watch the project on YouTube" 
          style="width: 100%; max-width: 600px; height: auto; border: 1px solid #ccc; border-radius: 5px;">
 </a>
 
@@ -629,12 +630,12 @@ the concentricity.
   <div class="diagonal-stack">
     <img 
       src="{{ '/assets/images/cordic-timing-zoom-out.png' | relative_url }}" 
-      alt="Top View ESP32 Project Image" 
+      alt="cordic timing zoom out Image" 
       class="stacked-image diagonal-top" 
       onclick="openImage('{{ '/assets/images/cordic-timing-zoom-out.png' | relative_url }}')">
     <img 
       src="{{ '/assets/images/cordic-timing-zoom-out2.png' | relative_url }}" 
-      alt="Top View ESP32 Project Image" 
+      alt="cordic timing zoom out alternative Image" 
       class="stacked-image diagonal-bottom" 
       onclick="openImage('{{ '/assets/images/cordic-timing-zoom-out2.png' | relative_url }}')">
   </div>
