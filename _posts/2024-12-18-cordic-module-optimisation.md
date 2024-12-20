@@ -13,7 +13,7 @@ image: /assets/images/cordic-dalle.webp
   height: 200px; /* Adjust height as needed */
 ">
 </div>
-{% include small-text.html content="Being in 2024, I could not resist
+{% include small-text.html content="Being in 2025, I could not resist
 asking Dall-E to help me with the visuals." %}
 
 {% include spacer.html size="3rem" %}

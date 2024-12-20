@@ -16,7 +16,7 @@ image: /assets/images/project1.jpg
          alt="ESP32 Project Image" style="width: 100%; height: auto;">
   </div>
 </div>
-{% include small-text.html content="Being in 2024, I could not resist
+{% include small-text.html content="Being in 2025, I could not resist
 asking Dall-E to help me with the visuals." %}
 
 {% include spacer.html size="3rem" %}
