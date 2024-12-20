@@ -74,13 +74,20 @@ in the cable was adjustable with a turnbuckle while the rotation center
 was easily adjusted with a screwed clamp. A few dabs of grease and some
 appropriately welded guides and an adjustable finger on top of the frame
 of the blower and the chute was rotating smoothly and with good span.
-That part was eyeballed and turned out great.
+That part of the project was eyeballed and it turned out great.
 
 ## Chute elevation ... Oops!
 
-The chute elevation required more thoughts. A lot of it. The main issue
-was to select the position and length of the linkage $h$, as the movement
-of the articulated flap, the one at the tip, could place it in very weird
+The chute elevation required more thoughts. A lot of it. Cylinder in
+hand, it was clear that the output angle swing would not enable sending
+the snow where it needed to go, especially when the lower angles were
+considered. Sending the white stuff directly on the ground around the
+tractor was very desirable and not really an option initially with the
+original, one hinged flap.
+
+The main issue in adding the second flap was to select the position and
+length of the linkage $h$, as the movement of the second articulated
+flap, the one at the tip of the chute, could place it in very weird
 configurations. Metal bending configurations, that is. Don't ask me why
 I know...
 
