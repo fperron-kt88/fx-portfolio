@@ -33,12 +33,12 @@ joint rotation and localisation, even though in this specific case only one
 degree of freedom is considered.
 
 The problem to solve was to identify a working configuration, in short
-establishing the length of the $h$ link and it's pivot mounting point
-location $P_2$
+establishing the length of the $h$ link and its pivot mounting point
+location $P_2$ before the welder was switched on.
 
 # Why ?
 
-The shallow answer is easy: two bird's with one stone (two wins in one move,
+Why oh why, you ask? The shallow answer is easy: two bird's with one stone (two wins in one move,
 no birds were harmed...):
  
 1. configuring and testing a $\LaTeX$ tool chain for an incoming Master's degree memoir
