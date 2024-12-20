@@ -78,3 +78,15 @@ code[class*="linenos"] td.rouge-code {
     padding-left: 10px;
 }
 
+/* Default appearance of code blocks */
+code, pre {
+    display: block;
+    width: 100%; /* Initial width is constrained */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Expand on hover */
+code:hover, pre:hover {
+    width: 130%; /* Initial width is constrained */
+}
+
