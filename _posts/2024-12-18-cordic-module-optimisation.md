@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CORDIC optimization for FPGA"
+title: "CORDIC optimization for an FPGA"
 date: 2024-06-18
 categories: projects
 image: /assets/images/cordic-dalle.webp
