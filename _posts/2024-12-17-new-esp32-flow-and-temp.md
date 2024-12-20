@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "esp32 port: better flow and temp sensors"
+title: "ESP32 port: better flow and temp sensors"
 date: 2024-06-17
 categories: projects
 image: /assets/images/project1.jpg
