@@ -59,24 +59,25 @@ is an interesting case of very efficient mathematical optimisation as
 an iterative process that is very well suited for FPGA implementation
 in a FSM (Finite State Machine) using only additions and bit shifts to
 replace multiplication. It is very efficient in that very few resources
-are required. The algorithm can be tuned to reach high precision when
-required. We typically reach a precision of 0.0001 or better with this
-implementation.
+are used and that they run fast. The algorithm can be tuned to reach
+high precision when required. We typically reach a precision of 0.0001
+or better with this implementation.
 
 The idea here is to first present the basic mathematical optimization. A
 fixed point implementation is described next with accompanying verilog.
 
 ## Inspiration
 
-The material here is inspired from an excellent in depth blog
+The material is inspired from an excellent in depth blog
 as [found on All about circuits on the introduction to the cordic
 algorithm](https://www.allaboutcircuits.com/technical-articles/an-introduction-to-the-cordic-algorithm/)
+extending it with an implementation.
 
 ## Algorithm overview
 
-The algorithm takes an angle as an input and outputs the sin and cos
-components associated with this angle. One remembers that, on the unit
-circle, sin represents the vertical component of the rotated vector
+The algorithm takes an angle as an input and will output the sin and
+cos components associated with this angle. One remembers that, on the
+unit circle, sin represents the vertical component of the rotated vector
 while cos represents its horizontal component.
 
 The concept of the algorithm is to iteratively rotate a vector using
