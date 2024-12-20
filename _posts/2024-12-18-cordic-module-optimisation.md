@@ -478,7 +478,7 @@ announces the start of a computation by raising running and lowering
 ready respectively on lines 66 and 67. All is set now to compute the
 new sin and cos values of the angle_in as requested.
 
-<div class="image-stack-wrapper">
+<div class="image-stack-wrapper-short">
   <div class="diagonal-stack">
     <img 
       src="{{ '/assets/images/cordic-timing-zoom.png' | relative_url }}" 
@@ -534,7 +534,7 @@ new sin and cos values of the angle_in as requested.
   z-index: 3; /* Ensure the hovered image is fully on top */
 }
 
-.image-stack-wrapper {
+.image-stack-wrapper-short {
   float: right;
   width: 50%; /* Adjust based on available space */
   margin-left: 10px;
@@ -652,48 +652,13 @@ the concentricity.
 </script>
 
 <style>
-.stacked-image {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition:
-    transform 0.2s ease-in-out,
-    z-index 0.2s ease-in-out;
-  position: absolute;
-}
-
-.diagonal-stack {
-  position: relative;
-  width: 100%;
-  height: 400px; /* Ensure this accommodates the combined height of stacked images */
-}
-
-.diagonal-top {
-  top: 0px;
-  left: 0px; /* Slight horizontal offset */
-  z-index: 2;
-}
-
-.diagonal-bottom {
-  top: 100px; /* Vertical offset for diagonal stacking */
-  left: 30px; /* Adjust as needed for horizontal overlap */
-  z-index: 1;
-}
-
-.stacked-image:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-  z-index: 3; /* Ensure the hovered image is fully on top */
-}
-
 .image-stack-wrapper {
   float: right;
   width: 50%; /* Adjust based on available space */
   margin-left: 10px;
   shape-outside: polygon(0% 0%, 90% 0%, 90% 90%, 0% 90%);
   clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%); /* Larger polygon */
-  height: 330px; /* Matches the `.diagonal-stack` height */
+  height: 310px; /* Matches the `.diagonal-stack` height */
 }
 </style>
 
@@ -713,8 +678,6 @@ the error and the Pythagorean norm error (eccentricity).
 Leave me a message on my
 [LinkedIn](https://linkedin.com/in/francoisperron) if you want to know
 more about this.
-
-
 
 # Conclusion
 
