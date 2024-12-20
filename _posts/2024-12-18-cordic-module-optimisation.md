@@ -36,17 +36,15 @@ an angle coming from the roll of the IMU platform.
 ```mermaid
 flowchart LR
     %% Nodes
-    A[IMU Platform]
-    B[CORDIC Module]
-    C[HDMI Module]
-    D[Display]
-    E[Rotated Bar Graphs]
+    A[IMU \n Platform]
+    B[CORDIC \n Module]
+    C[HDMI \n Module]
+    E[Rotated \n Bar \n Graphs]
 
     %% Connections
-    A -->| Roll angle | B
-    B -->| sin, cos | C
-    C -->| Rotation \n matrix | D
-    D -->| Rotated \n bar graph| E
+    A -->| Roll \n angle | B
+    B -->| sin \n cos | C
+    C -->| Rotation \n matrix | E
 ```
 
 The angle of the roll is fed into a cordic module to compute separate
