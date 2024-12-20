@@ -155,7 +155,7 @@ The first surprise was that the output angle was, essentially, the
 **double** of the input angle. That's it. That is how you can flip the
 snow out of the blower and send it back down without bogging the fan. You
 have three surfaces to play with: the fixed chute part that guides the
-snow up for the sky, the first mobile flap that bends it to horizontal
+snow up to the sky, the first mobile flap that bends it to horizontal
 (watch it, the windows!), then the last part connected to the member $h$
 that doubles the effective angle, sending the snow back down.
 
@@ -276,7 +276,7 @@ kicker is that this is exactly what you would want for your pair of Vise
 Grip pliers! Not so much for your blower.
 
 In all applicability, after finding a geometry that made sense with the
-actual chute that I already had, all was left what to ensure that the
+actual chute that I already had, all was left was to ensure that the
 selected $h$ and $P_2$ would prevent the kink angle between $g$ and $h$
 to reverse, sending the last flap in the air and the operator in a state
 of surprise ;-)
@@ -285,8 +285,9 @@ The tractor was used a lot with the implemented device. One day I
 might stumble upon a video of it in operation and decide to post it
 here. Meanwhile, here are a few photos of the setup. Please don't mind
 the color palette too much, this was meant to be a work horse on the farm,
-not a show winner ;-)
+not a beauty pageant winner ;-)
 
+{% include spacer.html size="3rem" %}
 
 Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
