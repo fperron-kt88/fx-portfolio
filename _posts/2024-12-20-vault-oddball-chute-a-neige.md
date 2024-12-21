@@ -190,7 +190,7 @@ Linkage](https://www.youtube.com/watch?v=CZuBeBztzSY)
       src="{{ '/assets/images/chute-hydraulics.jpg' | relative_url }}" 
       alt="Hydraulic Electrostatic Vane" 
       class="stacked-image diagonal-image" 
-      onclick="openImage('{{ '/assets/images/chute-hydraulic.jpg' | relative_url }}')">
+      onclick="openImage('{{ '/assets/images/chute-hydraulics.jpg' | relative_url }}')">
     <img 
       src="{{ '/assets/images/chute-handle.jpg' | relative_url }}" 
       alt="Lever of Chute" 
