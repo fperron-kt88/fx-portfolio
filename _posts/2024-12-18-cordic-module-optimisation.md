@@ -62,8 +62,8 @@ fast. The specific implementation can be tuned to reach high precision
 when required. We typically reach a precision of 0.0001 or better with
 the code presented here.
 
-The idea here is to first present the basic mathematical optimization. A
-fixed point implementation is described next with accompanying verilog.
+The idea here is to first describe the basic mathematical optimization. A
+fixed point implementation is shown next with accompanying verilog.
 
 ## Inspiration
 
