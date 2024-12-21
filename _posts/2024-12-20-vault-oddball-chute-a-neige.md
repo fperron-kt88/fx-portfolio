@@ -38,15 +38,15 @@ location $P_2$ before the welder was switched on.
 
 # Why ?
 
-Why oh why, you ask? The shallow answer is easy: two bird's with one stone (two wins in one move,
+Why oh why, you ask? The shallow answer is easy: two birds with one stone
+(two wins in one move,
 no birds were harmed...):
  
 1. configuring and testing a $\LaTeX$ tool chain for an incoming Master's degree memoir
 1. designing a snow blower hydraulic actuated chute in one pass
 
 The first goal was clear and the result is the attached .pdf report. It
-looked the part and got me enrolled alright. So, let's call this one
-a success!
+looked the part and got me enrolled, so that's that...
 
 As for the chute, and looking with envy at the neighbor's machines,
 it became clear that the new (to me) snow blower from the 1970's it
