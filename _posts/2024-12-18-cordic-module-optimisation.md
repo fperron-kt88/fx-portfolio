@@ -579,16 +579,16 @@ on the timing diagram. Each step brings x and y closer to the expected
 answer values with decreasing adjustments as the shifting gets more
 intense with the step increase.
 
-From a hardware perspective, both data paths for the positive and
-negative rotations were probably optimized into a single one with
-different settings, but the general idea remains that a full adder is at
-the center of all this. Being fed by either the full precedent value of
-itself and a selectively bit shifted version of either x and y. Are these
-being implemented as a real shift register or some bit field multiplexer
-could be validated by looking at the synthesis and placement reports, but
-one thing remains: the simulation with static timing runs the complete
-operation in one cycle at 100MHz without any perceived effort and the
-real FPGA runs the module at 50MHz without a glitch either.
+From a hardware perspective, both data paths for the positive and negative
+rotations were probably optimized into a single one with different
+settings, but the general idea remains that a full adder is at the center
+of all this. Being fed by either the full precedent value of itself and
+a selectively bit shifted version of either x and y. Are these being
+implemented as a real shift register or some bit field multiplexer?
+This could be validated by looking at the synthesis and placement
+reports. But one thing remains: the simulation with static timing runs
+the complete operation in one cycle at 100MHz without any perceived
+effort and the real FPGA runs the module at 50MHz without a glitch either.
 
 ### Tracking the value of theta
 
