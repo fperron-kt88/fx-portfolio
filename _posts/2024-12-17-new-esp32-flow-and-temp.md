@@ -386,6 +386,7 @@ the chat</a> and comeback soon!
 would already provide generalized interface to sensors? This must be
 already solved for IoT, right?
 
+Let's take a look at this first:
 -   lm-sensors
 -   SensorFusion
 -   ThingSpeak
