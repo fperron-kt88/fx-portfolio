@@ -70,14 +70,22 @@ fixed point implementation is shown next with accompanying verilog.
 The material is inspired from an excellent in depth blog
 as [found on All about circuits on the introduction to the cordic
 algorithm](https://www.allaboutcircuits.com/technical-articles/an-introduction-to-the-cordic-algorithm/)
-extending it with an implementation.
+extending it here with a verilog implementation.
+
+For the astute reader, there is a very in depth article,
+published in 2009 for the 50 years of the invention
+of the algorithm by Jack E. Volder. [This IEEE paper
+here](https://eprints.soton.ac.uk/267873/1/tcas1_cordic_review.pdf)
+is a must read to dive into the details and, also, the other modes of
+operation of the algorithm that yields polar to rectangular conversions,
+hyperbolic functions, division and many more.
 
 ## Algorithm overview
 
-The algorithm takes an angle as an input and will output the sin and
-cos components associated with this angle. One remembers that, on the
-unit circle, sin represents the vertical component of the rotated vector
-while cos represents its horizontal component.
+The algorithm, as implemented, takes an angle as an input and will output
+the sin and cos components associated with this angle. One remembers
+that, on the unit circle, sin represents the vertical component of the
+rotated vector while cos represents its horizontal component.
 
 The concept of the algorithm is to iteratively rotate a vector using
 a set of known rotation angles until a good match is reached with the
