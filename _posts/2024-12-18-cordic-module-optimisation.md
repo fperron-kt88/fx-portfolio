@@ -368,9 +368,9 @@ parameter PREFIX = 15,
 )(
 input wire clk,
 input wire reset,
-input wire signed [IO_WIDTH-1:0] angle_in,// Angle in fixed-point format (16-bit)
-output reg signed [IO_WIDTH-1:0] cos_out, // 16 bits Cosine output in fixed-point
-output reg signed [IO_WIDTH-1:0] sin_out, // 16 bits Sine output in fixed-point
+input wire signed [IO_WIDTH-1:0] angle_in,// Angle in fixed-point format
+output reg signed [IO_WIDTH-1:0] cos_out, // Cosine output in fixed-point
+output reg signed [IO_WIDTH-1:0] sin_out, // Sine output in fixed-point
 output reg ready // Data ready signal
 );
 
