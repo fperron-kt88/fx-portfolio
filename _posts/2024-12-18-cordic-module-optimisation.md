@@ -72,13 +72,13 @@ as [found on All about circuits on the introduction to the cordic
 algorithm](https://www.allaboutcircuits.com/technical-articles/an-introduction-to-the-cordic-algorithm/)
 extending it here with a verilog implementation.
 
-For the astute reader, there is a very in depth article,
-published in 2009 for the 50 years of the invention
-of the algorithm by Jack E. Volder. [This IEEE paper
-here](https://eprints.soton.ac.uk/267873/1/tcas1_cordic_review.pdf)
-is a must read to dive into the details and, also, the other modes of
-operation of the algorithm that yields polar to rectangular conversions,
-hyperbolic functions, division and many more.
+For the astute reader that would like even more in depths details,
+there is a also this article, published in 2009 for the 50 years of
+the invention of the algorithm by Jack E. Volder. [This IEEE paper
+here](https://eprints.soton.ac.uk/267873/1/tcas1_cordic_review.pdf) is
+a must read if you want to learn about the other modes of operation of
+the algorithm that yield polar to rectangular conversions, hyperbolic
+functions, division and many more.
 
 ## Algorithm overview
 
