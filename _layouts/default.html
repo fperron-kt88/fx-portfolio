@@ -59,14 +59,14 @@
     <body>
         {% if jekyll.environment == "production" %}
         <!-- Google Tag Manager (noscript) -->
-        <noscript>
-            <iframe
+        <noscript
+            ><iframe
                 src="https://www.googletagmanager.com/ns.html?id=GTM-N3339PFR"
                 height="0"
                 width="0"
                 style="display: none; visibility: hidden"
-            ></iframe>
-        </noscript>
+            ></iframe
+        ></noscript>
         <!-- End Google Tag Manager (noscript) -->
         {% endif %}
 
@@ -146,7 +146,7 @@
             document.addEventListener("DOMContentLoaded", function () {
                 // Find all Mermaid code blocks
                 const mermaidBlocks = document.querySelectorAll(
-                    "pre > code.language-mermaid"
+                    "pre > code.language-mermaid",
                 );
 
                 mermaidBlocks.forEach((block) => {
@@ -203,6 +203,9 @@
                 WaveDrom.ProcessAll();
             });
         </script>
-        <script src="//code.tidio.co/l1wmxlfn2c7u77x4bcib8nmte3bqmbtq.js" async></script>
+        <script
+            src="//code.tidio.co/l1wmxlfn2c7u77x4bcib8nmte3bqmbtq.js"
+            async
+        ></script>
     </body>
 </html>
