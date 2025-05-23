@@ -2,7 +2,8 @@ title: "FX's Projects"
 name: "François Perron"
 description: "Musings involving electronics, systems, and stuff hackers care about."
 baseurl: "/fx-portfolio" # Leave this empty for the root
-url: "https://fperron-kt88.github.io"
+#url: "https://fperron-kt88.github.io"
+url: "https://francoisperron.ca"
 
 #author:
 #  name: "François Perron"
