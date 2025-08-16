@@ -58,7 +58,7 @@
     </head>
     <body>
         {% if jekyll.environment == "production" %}
-        <!-- Google Tag Manager (noscript) -->
+        <!-- DISABLED Google Tag Manager (noscript)
         <noscript
             ><iframe
                 src="https://www.googletagmanager.com/ns.html?id=GTM-N3339PFR"
@@ -67,7 +67,7 @@
                 style="display: none; visibility: hidden"
             ></iframe
         ></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+        End DISABLED Google Tag Manager (noscript) -->
         {% endif %}
 
         <div id="header">
@@ -121,21 +121,21 @@
                     </button>
                 </form>
             </div> -->
-            <p style="text-align: center; margin: 0;">
-                    <span class="credits left"
-                        >Project maintained by
-                        <a href="{{ site.github.owner_url }}"
-                            >{{ site.github.owner_name }}</a
-                        ></span
-                    >
+            <p style="text-align: center; margin: 0">
+                <span class="credits left"
+                    >Project maintained by
+                    <a href="{{ site.github.owner_url }}"
+                        >{{ site.github.owner_name }}</a
+                    ></span
+                >
             </p>
-            <p style="text-align: center; margin: 0;">
-                    <span class="credits right"
-                        >Hosted on GitHub Pages &mdash; Theme by
-                        <a href="https://twitter.com/mattgraham"
-                            >mattgraham</a
-                        ></span
-                    >
+            <p style="text-align: center; margin: 0">
+                <span class="credits right"
+                    >Hosted on GitHub Pages &mdash; Theme by
+                    <a href="https://twitter.com/mattgraham"
+                        >mattgraham</a
+                    ></span
+                >
             </p>
             <p style="text-align: center">
                 &copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights
@@ -207,9 +207,10 @@
                 WaveDrom.ProcessAll();
             });
         </script>
-        <script
+        <!--        <script
             src="//code.tidio.co/l1wmxlfn2c7u77x4bcib8nmte3bqmbtq.js"
             async
-        ></script>
+        ></script>   -->
+        {% include analytics-posthog.html %}
     </body>
 </html>
