@@ -8,6 +8,28 @@
         //person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
         person_profiles: 'always', // or 'always' to create profiles for anonymous users as well
     })
+
+     // --- Persistent properties (stick across visits on this device) ---
+  posthog.register({
+    app: 'portfolio',                 // which app emitted this
+    site: 'fx-portfolio',             // human name
+    env: '{{ jekyll.environment }}',  // "production" for GH pages
+    baseurl: '{{ site.baseurl }}',    // e.g. /fx-portfolio
+    deploy_rev: '{{ site.github.build_revision | default: "v1.0" }}'
+  });
+
+  // --- Per-session properties (reset each new session/tab) ---
+  posthog.register_for_session({
+    host: location.host,
+    path: location.pathname,
+    ref: document.referrer || null
+  });
+
+  // --- Per-person properties (funnel stub) ---
+      posthog.setPersonProperties({
+    app: 'fx-portfolio'
+  })
+
 </script>
 {% endif %}
 
