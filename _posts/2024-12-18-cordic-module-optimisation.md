@@ -700,6 +700,8 @@ YouTube video where the roll input of the IMU is sent to this cordic to compute
 the cos and sin values used to rotate a bar graph in real time. Smooth!
 
 
+<!--
 Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
 the chat</a> and comeback soon!
+-->

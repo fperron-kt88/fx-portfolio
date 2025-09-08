@@ -289,6 +289,8 @@ not a beauty pageant winner ;-)
 
 {% include spacer.html size="3rem" %}
 
+<!--
 Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
 the chat</a> and comeback soon!
+-->

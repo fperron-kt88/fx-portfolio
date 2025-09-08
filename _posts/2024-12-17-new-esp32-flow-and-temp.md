@@ -373,10 +373,12 @@ development, it became quite clear that the framework is very useful
 in my lab. Consequently, more content and documentation here is bound
 to follow...
 
+<!--
 {% include spacer.html size="5rem" %}
 Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
 the chat</a> and comeback soon!
+-->
 
 {% include spacer.html size="20rem" %}
 

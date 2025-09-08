@@ -240,7 +240,9 @@ $$
 So, there we are. A brand new blog to experiment documenting electronics
 and embedded projects, on the web and directly as a github repo.
 
+<!--
 {% include spacer.html size="5rem" %}
 Don't forget to <a href="javascript:;"
 onclick="tidioChatApi.display(true);tidioChatApi.open()">subscribe in
 the chat</a> and comeback soon!
+-->
